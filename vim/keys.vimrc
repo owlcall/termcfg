@@ -3,6 +3,11 @@
 let mapleader = " "
 nmap \ <Leader>
 
+" UltiSnips triggering
+let g:UltiSnipsExpandTrigger = '<C-j>'
+let g:UltiSnipsJumpForwardTrigger = '<C-j>'
+let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
+
 " Disabling arrow keys (forming habbits!)
 noremap <Up> <NOP>
 noremap <Down> <NOP>
