@@ -1,2 +1,2 @@
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
-cp .zshrc ~/.zshrc
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.config/powerlevel9k
+echo 'source  ~/.config/termcfg/zsh/.zshrc' >> ~/.zshrc
