@@ -59,3 +59,4 @@ fi
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
+alias dev='cd ~/Documents/dev'
