@@ -28,9 +28,15 @@ nnoremap <Right> <C-w>>
 
 "=== Navigation bindings
 "nnoremap <silent> <Leader>q :bd\|bd #<CR>	" Destroy buffer
-nnoremap <silent> <S-Tab> : bp<CR>	" Previous buffer
-nnoremap <silent> <Tab> : bn<CR>	" Next buffer
+"nnoremap <silent> <S-Tab> : bp<CR>	" Previous buffer
+"nnoremap <silent> <Tab> : bn<CR>	" Next buffer
 nnoremap <silent> <Leader>d :bp\|bd #<CR>	" Destroy buffer
+
+"nnoremap gte: YcmCompleter GoToDeclaration<CR>
+"nnoremap gtd: YcmCompleter GoToDefinition<CR>
+
+nnoremap <silent> <Tab> :bn<CR>
+nnoremap <silent> <S-Tab> :bp<CR>
 
 "=== Quickfix navigation
 "nnoremap <silent> <Leader>e :cn <CR>		" Open file/line for next error in quickfix window
@@ -42,7 +48,7 @@ nnoremap <silent> <Leader>d :bp\|bd #<CR>	" Destroy buffer
 nnoremap <silent> <Leader><Leader> :nohlsearch<CR>						" Clear highlighting
 nnoremap <silent> <Esc><Esc> :nohlsearch<CR>							" Clear highlighting
 nnoremap <silent> <C-n>	   :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>	" Toggle line numbers
-nnoremap <silent> <Leader>o :e.<CR>										" Open editor window
+nnoremap <silent> <Leader>o :Le<CR>										" Open editor window
 
 "=== Editor bindings
 "nnoremap <space> za|					" Enable folding with the spacebar

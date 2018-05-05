@@ -12,6 +12,7 @@ call vundle#begin()
 
   Plugin 'Valloric/YouCompleteMe'
 	Plugin 'google/vim-searchindex'
+  Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
 	Plugin 'SirVer/ultisnips'
 	Plugin 'honza/vim-snippets'
@@ -25,7 +26,7 @@ if has ('autocmd')
 		autocmd BufReadPost * call setpos(".", getpos("'\""))|normal zz
 	augroup END
 
-	autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
+  autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 	autocmd WinEnter * set cursorline		" Highlight cursor line
 	autocmd WinLeave * set nocursorline		" Highlight cursor line

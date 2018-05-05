@@ -13,6 +13,11 @@ set clipboard=unnamed	" Allow us to use system clipboard"
 set shortmess+=O	" file-read message overwrites previous
 set shortmess+=o	" overwrite file-written messages
 
+"let g:netrw_preview=1 " Make vertical previews default
+let g:netrw_liststyle = 3
+let g:netrw_winsize   = 20
+
+
 if exists('&belloff')
   set belloff=all	" never ring the bell for any reason
 endif
