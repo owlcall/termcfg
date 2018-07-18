@@ -1,6 +1,6 @@
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.config/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 	Plugin 'gmarik/Vundle.vim'
 	Plugin 'airblade/vim-gitgutter'
@@ -30,5 +30,7 @@ if has ('autocmd')
 
 	autocmd WinEnter * set cursorline		" Highlight cursor line
 	autocmd WinLeave * set nocursorline		" Highlight cursor line
+
+  autocmd BufRead,BufNewFile * setlocal textwidth=80
 endif
 

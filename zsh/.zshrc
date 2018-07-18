@@ -1,8 +1,10 @@
 
 export PATH=/opt/local/bin:$PATH
 
-alias l='ls -lAh -G'
-alias ls='ls -A -G'
+#alias l='ls -lAh -G'
+#alias ls='ls -A -G'
+alias l='ls -lh -G'
+alias ls='ls -G'
 alias gs='git status'
 
 

@@ -30,10 +30,13 @@ nnoremap <Right> <C-w>>
 "nnoremap <silent> <Leader>q :bd\|bd #<CR>	" Destroy buffer
 "nnoremap <silent> <S-Tab> : bp<CR>	" Previous buffer
 "nnoremap <silent> <Tab> : bn<CR>	" Next buffer
-nnoremap <silent> <Leader>d :bp\|bd #<CR>	" Destroy buffer
+nnoremap <silent> <Leader>d :bp \| bd! #<CR>	" Destroy buffer
+nnoremap gtd :YcmCompleter GoToDeclaration<CR>
+nnoremap gtf :YcmCompleter GoToDefinition<CR>
+
 
 "nnoremap gte: YcmCompleter GoToDeclaration<CR>
-"nnoremap gtd: YcmCompleter GoToDefinition<CR>
+"nnoremap gtd :YcmCompleter GoToDefinition<CR>
 
 nnoremap <silent> <Tab> :bn<CR>
 nnoremap <silent> <S-Tab> :bp<CR>

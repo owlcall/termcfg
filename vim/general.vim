@@ -49,7 +49,7 @@ set scrolloff=1		" Scroll offset of 1 line
 set showmatch		" Show matching bracket
 set wildmenu		" Show advanced autocompletion in command mode
 set nojoinspaces	" don't autoinsert two spaces after '.', '?', '!' for join command
-set colorcolumn=80
+set colorcolumn=81
 
 " Fixes
 "-------
