@@ -78,3 +78,9 @@ function fixssh() {
   eval $(tmux show-env -s |grep '^SSH_')
 }
 
+if [[ -x $(command -v git) ]]; then
+  git config merge.tool vimdiff
+  git config merge.conflictstyle diff3
+  #git config mergetool.prompt false
+fi
+
