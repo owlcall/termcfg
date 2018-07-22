@@ -61,4 +61,20 @@ fi
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_DISABLE_RPROMPT=true
 
-alias dev='cd ~/Documents/dev'
+alias grep="grep --color"
+alias fs="du -sh"
+#set -o vi
+
+function 256colors() {
+  for i in {0..255} ; do
+      printf "\x1b[48;5;%sm%3d\e[0m " "$i" "$i"
+      if (( i == 15 )) || (( i > 15 )) && (( (i-15) % 6 == 0 )); then
+          printf "\n";
+      fi
+  done
+}
+
+function fixssh() {
+  eval $(tmux show-env -s |grep '^SSH_')
+}
+
