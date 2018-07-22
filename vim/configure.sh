@@ -8,10 +8,10 @@ vim +PluginInstall +qall
 cp $ROOT/theme.vim ~/.vim/colors/
 
 rm $ROOT/.vimrc
-echo "source \"$ROOT/plugins.vim\"" >> $ROOT/.vimrc
-echo "source \"$ROOT/visual.vim\"" >> $ROOT/.vimrc
-echo "source \"$ROOT/general.vim\"" >> $ROOT/.vimrc
-echo "source \"$ROOT/keys.vim\"" >> $ROOT/.vimrc
+echo "source $ROOT/plugins.vim" >> $ROOT/.vimrc
+echo "source $ROOT/visual.vim" >> $ROOT/.vimrc
+echo "source $ROOT/general.vim" >> $ROOT/.vimrc
+echo "source $ROOT/keys.vim" >> $ROOT/.vimrc
 echo "source $ROOT/.vimrc" >> ~/.vimrc
 
 vim +PluginInstall +qall
