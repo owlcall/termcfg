@@ -84,3 +84,19 @@ function fixssh() {
   ##git config mergetool.prompt false
 #fi
 
+setopt auto_cd
+
+function plisten {
+  echo `lsof -n -i4TCP:$1 | grep LISTEN`
+}
+
+function pproc {
+  numre='^[0-9]+$'
+  numlines=1
+  if [[ $2 =~ $numre ]]; then
+    numlines=$2
+  fi
+  lsof -p $1 | head -n $(expr $numlines + 1) | tail -n $numlines | awk '{print $9}'
+}
+
+
