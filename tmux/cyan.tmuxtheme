@@ -18,8 +18,8 @@ set -g status-bg colour235
 #set -g status-bg colour238
 
 # Window status
-set -g window-status-format " #I. #W  "
-set -g window-status-current-format " #I. #W  "
+set -g window-status-format " #I. #W "
+set -g window-status-current-format " #I. #W "
 
 set -g window-status-bg colour238
 set -g window-status-fg colour254
@@ -33,9 +33,9 @@ set -g window-status-activity-bg colour254 # fg and bg are flipped here due to
 set -g window-status-activity-fg colour124 # a bug in tmux
 
 # Window separator
-set -g window-status-separator ""
-#set -g window-status-separator-bg colour32
-#set -g window-status-separator-fg colour253
+set -g window-status-separator " "
+#set -g window-status-separator-bg colour235
+#set -g window-status-separator-fg colour235
 
 # Left side of status bar
 set -g status-left-bg colour233
@@ -47,10 +47,11 @@ set -g status-left "#S #[fg=colour235,bg=colour233,nobold]"
 #set -g status-left ""
 
 # Right side of status bar
-set -g status-right-bg colour233
-set -g status-right-fg colour243
+set -g status-right-bg colour236
+set -g status-right-fg colour244
 set -g status-right-length 150
-set -g status-right "#[fg=7,bg=1]#[#{?client_prefix,#[reverse] [CMD]#[noreverse] ,}#[fg=colour235,bg=colour233]#[fg=colour244,bg=colour235] /Se = #S /Ta = #I /Sp = #P #[fg=colour240,bg=c    olour235]#[fg=colour252,bg=colour238]  %Y-%m-%d  #[fg=colour245,bg=colour240]#[fg=colour255,bg=colour240]  %H:%M.%S  "
+set -g status-right " /Se = #S /Ta = #I /Sp = #P #[fg=colour253,bg=colour238]  %Y-%m-%d  #[fg=colour255,bg=colour240]  %H:%M.%S  "
+#set -g status-right "#[fg=7,bg=1]#[#{?client_prefix,#[reverse] [CMD]#[noreverse] ,}#[fg=colour235,bg=colour233]#[fg=colour244,bg=colour235] /Se = #S /Ta = #I /Sp = #P #[fg=colour240,bg=colour235]#[fg=colour252,bg=colour238]  %Y-%m-%d  #[fg=colour245,bg=colour240]#[fg=colour255,bg=colour240]  %H:%M.%S  "
 
 # Window status alignment
 set -g status-justify left
