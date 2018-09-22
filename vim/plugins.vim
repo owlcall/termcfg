@@ -9,11 +9,7 @@ call vundle#begin()
 	Plugin 'scrooloose/nerdcommenter'
 	Plugin 'vim-airline/vim-airline'
   Plugin 'vim-airline/vim-airline-themes'
-
-  Plugin 'Valloric/YouCompleteMe'
 	Plugin 'google/vim-searchindex'
-  Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
-
 	Plugin 'SirVer/ultisnips'
 	Plugin 'honza/vim-snippets'
 call vundle#end()            " required
