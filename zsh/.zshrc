@@ -38,6 +38,8 @@ else
   PROMPT="%{$grey_bg%}%{$cyan_fg%}$(print '\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
 fi
 
+PATH="/usr/local/bin:$PATH"
+
 alias l='ls -lh -G'
 alias ls='ls -G'
 alias gs='git status'
