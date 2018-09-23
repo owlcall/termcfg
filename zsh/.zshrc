@@ -33,9 +33,9 @@ eval white_fg='$(echo $FG[252])'
 #fi
 
 if [[ $(whoami) == 'root' ]]; then
-  PROMPT="$grey_bg$orange_fg$(print '\uE0B0')$light_fg %(4~|%-1~/../%2~|%3~) %{$reset_color%}$grey_fg$(print '\uE0B0')%{$reset_color%} "
+  PROMPT="%{$grey_bg%}%{$orange_fg%}$(print '\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
 else
-  PROMPT="$grey_bg$cyan_fg$(print '\uE0B0')$light_fg %(4~|%-1~/../%2~|%3~) %{$reset_color%}$grey_fg$(print '\uE0B0')%{$reset_color%} "
+  PROMPT="%{$grey_bg%}%{$cyan_fg%}$(print '\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
 fi
 
 alias l='ls -lh -G'
