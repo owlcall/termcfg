@@ -133,7 +133,7 @@ exe 'hi PreProc          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE1  .' '.s:M.'='
 exe 'hi Special          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BROWN0   .' '.s:M.'='.s:N
 exe 'hi Statement        '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:PINK0  .' '.s:M.'='.s:N
 exe 'hi String           '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE0  .' '.s:M.'='.s:N
-exe 'hi Todo             '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:R
+exe 'hi Todo             '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE2 .' '.s:M.'='.s:B
 exe 'hi Type             '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:PINK0  .' '.s:M.'='.s:N
 exe 'hi Underlined       '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:TEAL0   .' '.s:M.'='.s:U
 
