@@ -44,4 +44,5 @@ alias l='ls -lh -G'
 alias ls='ls -G'
 alias gs='git status'
 alias grep='grep --color'
+alias watch='watch --color'
 
