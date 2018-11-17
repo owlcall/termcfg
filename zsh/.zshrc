@@ -26,17 +26,19 @@ eval light_fg='$(echo $FG[249])'
 eval white_bg='$(echo $BG[252])'
 eval white_fg='$(echo $FG[252])'
 
-#if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-  #PROMPT_PREFIX='ssh'
-#else
-  #PROMPT_PREFIX='ssh'
-#fi
-
 if [[ $(whoami) == 'root' ]]; then
-  PROMPT="%{$grey_bg%}%{$orange_fg%}$(print '\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
+  PROMPT_COLOR="%{$orange_fg%}"
 else
-  PROMPT="%{$grey_bg%}%{$cyan_fg%}$(print '\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
+  PROMPT_COLOR="%{$cyan_fg%}"
 fi
+
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  PROMPT_PREFIX="%{$grey_bg%}$PROMPT_COLOR$(print '\u258F')%{$light_fg%}$(hostname)"
+else
+  PROMPT_PREFIX="" #"%{$grey_bg%}$PROMPT_COLOR$(print '\u258F')%{$light_fg%}$(hostname)"
+fi
+
+PROMPT="$PROMPT_PREFIX$PROMPT_COLOR$(print '\u2523\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
 
 PATH="/usr/local/bin:$PATH"
 
@@ -45,4 +47,13 @@ alias ls='ls -G'
 alias gs='git status'
 alias grep='grep --color'
 alias watch='watch --color'
+
+HISTSIZE=1024            #How many lines of history to keep in memory
+HISTFILE=~/.zsh_history     #Where to save history to disk
+SAVEHIST=1048576            #Number of history entries to save to disk
+#HISTDUP=erase               #Erase duplicates in the history file
+setopt    appendhistory     #Append history to the history file (no overwriting)
+setopt    sharehistory      #Share history across terminals
+setopt    incappendhistory  #Immediately append to the history file, not just when a term is killed
+
 
