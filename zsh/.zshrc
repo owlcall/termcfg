@@ -35,7 +35,7 @@ fi
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
   PROMPT_PREFIX="%{$grey_bg%}$PROMPT_COLOR$(print '\u258F')%{$light_fg%}$(hostname)"
 else
-  PROMPT_PREFIX="" #"%{$grey_bg%}$PROMPT_COLOR$(print '\u258F')%{$light_fg%}$(hostname)"
+  PROMPT_PREFIX="%{$grey_bg%}"
 fi
 
 PROMPT="$PROMPT_PREFIX$PROMPT_COLOR$(print '\u2523\uE0B0')%{$light_fg%} %(4~|%-1~/../%2~|%3~) %{$reset_color%}%{$grey_fg%}$(print '\uE0B0')%{$reset_color%} "
@@ -47,6 +47,7 @@ alias ls='ls -G'
 alias gs='git status'
 alias grep='grep --color'
 alias watch='watch --color'
+alias irssi='TERM=screen-256color irssi'
 
 HISTSIZE=1024            #How many lines of history to keep in memory
 HISTFILE=~/.zsh_history     #Where to save history to disk
