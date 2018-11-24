@@ -1,5 +1,5 @@
 " 'theme.vim' -- Vim color scheme.
-" Author:       Romain Lafourcade (romainlafourcade@gmail.com)
+" Author:       Tim Vasko, orig. Romain Lafourcade (romainlafourcade@gmail.com)
 " Description:  Essentially a streamlining and conversion to xterm colors of
 "               'sorcerer' by Jeet Sukumaran (jeetsukumaran@gmailcom)
 " Last Change:  2017 Aug 06
@@ -67,8 +67,8 @@ else                     "Console Vim
 	let s:BROWN0  = '143'	" 
 	let s:BROWN1  = '101'	" Filler between borders
 	let s:GREEN0  = '108'	" Insert mode backgroun
-    let s:GREEN1  = '28'	" Syntax: comments
-    let s:BLUE    = '67'	" Syntax: identifiers
+  let s:GREEN1  = '28'	" Syntax: comments
+  let s:BLUE    = '67'	" Syntax: identifiers
 	let s:YELLOW0 = '229'	" Syntax: {}
 	let s:TEAL0   = '66'	" 
 	let s:TEAL1   = '73'	" Gutter: current line
@@ -114,80 +114,80 @@ else                     "Console Vim
   endif
 endif
 
-exe 'hi Normal         '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
-exe 'hi LineNr         '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
-exe 'hi FoldColumn     '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
-exe 'hi Folded         '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
-exe 'hi MatchParen     '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:YELLOW0 .' '.s:M.'='.s:N
-exe 'hi signColumn     '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
-
 set background=dark
 
-exe 'hi Comment          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:GREEN1   .' '.s:M.'='.s:N
-exe 'hi Conceal          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
-exe 'hi Constant         '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE0  .' '.s:M.'='.s:N
-exe 'hi Error            '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:PINK1  .' '.s:M.'='.s:R
-exe 'hi Identifier       '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BLUE   .' '.s:M.'='.s:N
-exe 'hi Ignore           '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
-exe 'hi PreProc          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE1  .' '.s:M.'='.s:N
-exe 'hi Special          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BROWN0   .' '.s:M.'='.s:N
-exe 'hi Statement        '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:PINK0  .' '.s:M.'='.s:N
-exe 'hi String           '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE0  .' '.s:M.'='.s:N
-exe 'hi Todo             '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:ORANGE2 .' '.s:M.'='.s:B
-exe 'hi Type             '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:PINK0  .' '.s:M.'='.s:N
-exe 'hi Underlined       '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:TEAL0   .' '.s:M.'='.s:U
+exe 'hi Normal          '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
+exe 'hi LineNr          '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
+exe 'hi FoldColumn      '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
+exe 'hi Folded          '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
+exe 'hi MatchParen      '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:YELLOW0.' '.s:M.'='.s:N
+exe 'hi signColumn      '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
 
-exe 'hi NonText          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:GREY4  .' '.s:M.'='.s:N
+exe 'hi Comment         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:GREEN1 .' '.s:M.'='.s:N
+exe 'hi Conceal         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
+exe 'hi Constant        '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:ORANGE0.' '.s:M.'='.s:N
+exe 'hi Error           '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:PINK1  .' '.s:M.'='.s:R
+exe 'hi Identifier      '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BLUE   .' '.s:M.'='.s:N
+exe 'hi Ignore          '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
+exe 'hi PreProc         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:ORANGE1.' '.s:M.'='.s:N
+exe 'hi Special         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BROWN0 .' '.s:M.'='.s:N
+exe 'hi Statement       '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:PINK0  .' '.s:M.'='.s:N
+exe 'hi String          '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:ORANGE0.' '.s:M.'='.s:N
+exe 'hi Todo            '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:ORANGE2.' '.s:M.'='.s:B
+exe 'hi Type            '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:PINK0  .' '.s:M.'='.s:N
+exe 'hi Underlined      '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:TEAL0  .' '.s:M.'='.s:U
+                                                                         
+exe 'hi NonText         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:GREY4  .' '.s:M.'='.s:N
 
-exe 'hi Pmenu            '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
-exe 'hi PmenuSbar        '.s:M.'bg='.s:GREY4  .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
-exe 'hi PmenuSel         '.s:M.'bg='.s:TEAL0   .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
-exe 'hi PmenuThumb       '.s:M.'bg='.s:TEAL0   .' '.s:M.'fg='.s:TEAL0   .' '.s:M.'='.s:N
+exe 'hi Pmenu           '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
+exe 'hi PmenuSbar       '.s:M.'bg='.s:GREY4  .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
+exe 'hi PmenuSel        '.s:M.'bg='.s:TEAL0  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi PmenuThumb      '.s:M.'bg='.s:TEAL0  .' '.s:M.'fg='.s:TEAL0  .' '.s:M.'='.s:N
 
-exe 'hi ErrorMsg         '.s:M.'bg='.s:PINK1  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:R
-exe 'hi ModeMsg          '.s:M.'bg='.s:BG  .' '.s:M.'fg='.s:GREEN0  .' '.s:M.'='.s:N
-exe 'hi MoreMsg          '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:TEAL0   .' '.s:M.'='.s:N
-exe 'hi Question         '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:GREEN0  .' '.s:M.'='.s:N
-exe 'hi WarningMsg       '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:PINK1  .' '.s:M.'='.s:N
+exe 'hi ErrorMsg        '.s:M.'bg='.s:PINK1  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:R
+exe 'hi ModeMsg         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:GREEN0 .' '.s:M.'='.s:N
+exe 'hi MoreMsg         '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:TEAL0  .' '.s:M.'='.s:N
+exe 'hi Question        '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:GREEN0 .' '.s:M.'='.s:N
+exe 'hi WarningMsg      '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:PINK1  .' '.s:M.'='.s:N
 
-exe 'hi TabLine          '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BROWN1  .' '.s:M.'='.s:N
-exe 'hi TabLineFill      '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:GREY3  .' '.s:M.'='.s:N
-exe 'hi TabLineSel       '.s:M.'bg='.s:BROWN1  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi TabLine         '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BROWN1 .' '.s:M.'='.s:N
+exe 'hi TabLineFill     '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:GREY3  .' '.s:M.'='.s:N
+exe 'hi TabLineSel      '.s:M.'bg='.s:BROWN1 .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
 
-exe 'hi Cursor           '.s:M.'bg='.s:GREY5  .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
-exe 'hi CursorColumn     '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
-exe 'hi CursorLineNr     '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:TEAL1   .' '.s:M.'='.s:N
-exe 'hi CursorLine       '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
+exe 'hi Cursor          '.s:M.'bg='.s:GREY5  .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
+exe 'hi CursorColumn    '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
+exe 'hi CursorLineNr    '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:TEAL1  .' '.s:M.'='.s:N
+exe 'hi CursorLine      '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
 
-exe 'hi helpLeadBlank    '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
-exe 'hi helpNormal       '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
+exe 'hi helpLeadBlank   '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
+exe 'hi helpNormal      '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
 
-exe 'hi StatusLine       '.s:M.'bg='.s:BROWN1  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
-exe 'hi StatusLineNC     '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BROWN1  .' '.s:M.'='.s:N
+exe 'hi StatusLine      '.s:M.'bg='.s:BROWN1 .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi StatusLineNC    '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BROWN1 .' '.s:M.'='.s:N
 
-exe 'hi Visual           '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:TEAL2  .' '.s:M.'='.s:R
-exe 'hi VisualNOS        '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:U
+exe 'hi Visual          '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:TEAL2  .' '.s:M.'='.s:R
+exe 'hi VisualNOS       '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:U
 
-exe 'hi VertSplit        '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:GREY3  .' '.s:M.'='.s:N
-exe 'hi WildMenu         '.s:M.'bg='.s:TEAL2  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi VertSplit       '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:GREY3  .' '.s:M.'='.s:N
+exe 'hi WildMenu        '.s:M.'bg='.s:TEAL2  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
 
-exe 'hi Function         '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:TEAL2  .' '.s:M.'='.s:N
-exe 'hi SpecialKey       '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:GREY4  .' '.s:M.'='.s:N
-exe 'hi Title            '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:WHITE  .' '.s:M.'='.s:N
+exe 'hi Function        '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:TEAL2  .' '.s:M.'='.s:N
+exe 'hi SpecialKey      '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:GREY4  .' '.s:M.'='.s:N
+exe 'hi Title           '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:WHITE  .' '.s:M.'='.s:N
 
-exe 'hi DiffAdd          '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:GREEN0  .' '.s:M.'='.s:R
-exe 'hi DiffChange       '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:LPURPLE  .' '.s:M.'='.s:R
-exe 'hi DiffDelete       '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:PINK1  .' '.s:M.'='.s:R
-exe 'hi DiffText         '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:ORANGE2  .' '.s:M.'='.s:R
+exe 'hi DiffAdd         '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:GREEN0 .' '.s:M.'='.s:R
+exe 'hi DiffChange      '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:LPURPLE.' '.s:M.'='.s:R
+exe 'hi DiffDelete      '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:PINK1  .' '.s:M.'='.s:R
+exe 'hi DiffText        '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:ORANGE2.' '.s:M.'='.s:R
 
-exe 'hi IncSearch        '.s:M.'bg='.s:PINK1  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
-exe 'hi Search           '.s:M.'bg='.s:YELLOW0  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi IncSearch       '.s:M.'bg='.s:PINK1  .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi Search          '.s:M.'bg='.s:YELLOW0.' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
 
-exe 'hi Directory        '.s:M.'bg='.s:BG .' '.s:M.'fg='.s:TEAL1   .' '.s:M.'='.s:N
+exe 'hi Directory       '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:TEAL1  .' '.s:M.'='.s:N
 
-exe 'hi ColorColumn      '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
+exe 'hi ColorColumn     '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
 
-exe 'hi YcmErrorSection  '.s:M.'bg='.s:RED0  .' '.s:M.'fg='.s:GREY3 .' '.s:M.'='.s:N
+exe 'hi YcmErrorSection '.s:M.'bg='.s:RED0   .' '.s:M.'fg='.s:GREY3  .' '.s:M.'='.s:N
 
 "if has("gui_running")
 "hi SpellBad         ctermbg=NONE ctermfg=131  guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#af5f5f
