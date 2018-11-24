@@ -1,6 +1,9 @@
 
-set background=dark
 colorscheme theme
+syntax on		" Enable syntax highlighting across the board
+
+set background=dark
+set fillchars+=vert:│
 
 " Enable the tabline extension which shows all buffers
 let g:airline_theme = "airtheme"
@@ -25,5 +28,6 @@ let g:airline_section_warning = ''	" warnings notification
 let g:airline_powerline_fonts = 0	" disable powerline fonts
 
 " Ensure the vertical bars match the airline colors in the horizontal highlights
-hi VertSplit ctermbg=238 ctermfg=238
+hi VertSplit ctermbg=NONE ctermfg=240
+
 
