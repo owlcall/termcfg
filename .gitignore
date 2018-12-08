@@ -1,0 +1,5 @@
+tmux/tmux-battery
+vim/.vimrc
+**/*.swp
+tags
+
