@@ -36,6 +36,15 @@ let s:cterm_pink = 182
 let s:gui_borders = '#cccccc'
 let s:cterm_borders = s:cterm_med_gray_hi
 
+let s:_term_bright_grey = 248
+let s:_term_light_grey = 246
+let s:_term_medium_grey = 241
+let s:_term_dark_grey = 235       " Divider background
+let s:_term_dim_grey = 237        " Divider background
+let s:_term_blue = 38
+let s:_term_red = 196
+let s:_term_orange = 178
+
 let g:airline#themes#airtheme#palette = {}
 
 " Normal mode
@@ -45,23 +54,23 @@ let g:airline#themes#airtheme#palette = {}
 "let g:airline#themes#airtheme#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
 
-let s:NORMAL_TAB =          ['', '', s:cterm_black,      s:cterm_green]
-let s:NORMAL_STATUS_RIGHT = ['', '', s:cterm_green,      s:cterm_dark_gray]
-let s:NORMAL_STATUS_LEFT =  ['', '', s:cterm_light_gray, s:cterm_med_gray_lo]
+let s:NORMAL_TAB =          ['', '', s:_term_blue,      s:_term_dim_grey]        " Tab and bottom-right
+let s:NORMAL_STATUS_LEFT =  ['', '', s:_term_light_grey, s:_term_dark_grey]       " Both top and bottom status bar background + text color
+let s:NORMAL_STATUS_RIGHT = ['', '', s:_term_bright_grey,      s:_term_dim_grey]                  " Normal inactive tab
 
-let s:NORMAL_MODIFIED_STATUS_LEFT = ['', '', s:cterm_orange,     s:cterm_dark_gray,     '']
+let s:NORMAL_MODIFIED_STATUS_LEFT = ['', '', s:_term_orange, s:_term_dark_grey,     '']
 
 let g:airline#themes#airtheme#palette.normal = airline#themes#generate_color_map (s:NORMAL_TAB, s:NORMAL_STATUS_RIGHT, s:NORMAL_STATUS_LEFT)
 let g:airline#themes#airtheme#palette.normal_modified = { 'airline_c': s:NORMAL_MODIFIED_STATUS_LEFT }
 
 
 
-let s:INSERT_TAB =          ['', '', s:cterm_white, s:cterm_red]
-let s:INSERT_STATUS_RIGHT = ['', '', s:cterm_white, s:cterm_red]
-let s:INSERT_STATUS_LEFT =  ['', '', s:cterm_light_gray, s:cterm_med_gray_lo]
+let s:INSERT_TAB =          ['', '', s:cterm_white, s:cterm_red]                " Bottom right in mode, and tab (if modified)
+let s:INSERT_STATUS_LEFT =  ['', '', s:_term_red, s:_term_dark_grey]   " Bottom left
+let s:INSERT_STATUS_RIGHT = ['', '', s:cterm_white, s:cterm_red]                " Unused/Unidentified
 
-let s:INSERT_MODIFIED_STATUS_LEFT = ['', '', s:cterm_black, s:cterm_orange, '']
-let s:INSERT_PASTE_TAB    = ['', '', s:cterm_dark_gray, s:cterm_orange, '']
+let s:INSERT_MODIFIED_STATUS_LEFT = ['', '', s:_term_orange, s:_term_dark_grey, ''] " Bottom left, modified buffer
+let s:INSERT_PASTE_TAB    = ['', '', s:cterm_dark_gray, s:_term_orange, '']
 
 let g:airline#themes#airtheme#palette.insert = airline#themes#generate_color_map(s:INSERT_TAB, s:INSERT_STATUS_RIGHT, s:INSERT_STATUS_LEFT)
 let g:airline#themes#airtheme#palette.insert_modified = { 'airline_c': s:INSERT_MODIFIED_STATUS_LEFT }
@@ -69,10 +78,11 @@ let g:airline#themes#airtheme#palette.insert_paste = { 'airline_a': s:INSERT_PAS
 
 
 
-let s:REPLACE_RIGHT =        ['', '', s:cterm_blue, s:cterm_red]
-let s:REPLACE_STATUS_RIGHT = ['', '', s:cterm_light_gray, s:cterm_med_gray_lo]
+let s:REPLACE_RIGHT =        ['', '', s:cterm_white, s:cterm_red]
 let s:REPLACE_STATUS_LEFT =  ['', '', s:cterm_bright_red, s:cterm_dark_gray]
-let s:REPLACE_TAB_MODIFIED = ['', '', s:cterm_black, s:cterm_orange, '']
+let s:REPLACE_STATUS_RIGHT = ['', '', s:cterm_light_gray, s:cterm_med_gray_lo]
+
+let s:REPLACE_TAB_MODIFIED = ['', '', s:_term_orange, s:_term_dark_grey, '']
 
 let g:airline#themes#airtheme#palette.replace = airline#themes#generate_color_map(s:REPLACE_RIGHT, s:REPLACE_STATUS_RIGHT, s:REPLACE_STATUS_LEFT)
 let g:airline#themes#airtheme#palette.replace_modified = { 'airline_c': s:REPLACE_TAB_MODIFIED }
@@ -83,6 +93,7 @@ let s:VISUAL_TAB =          ['', '', s:cterm_black, s:cterm_blue]
 let s:VISUAL_STATUS_LEFT =  ['', '', s:cterm_light_gray, s:cterm_med_gray_lo]
 let s:VISUAL_STATUS_RIGHT = ['', '', s:cterm_blue, s:cterm_med_gray_hi]
 let s:VISUAL_MODIFIED_STATUS_LEFT = ['', '', s:cterm_black, s:cterm_orange, '']
+
 let g:airline#themes#airtheme#palette.visual = airline#themes#generate_color_map(s:VISUAL_TAB, s:VISUAL_STATUS_LEFT, s:VISUAL_STATUS_RIGHT)
 let g:airline#themes#airtheme#palette.visual_modified = { 'airline_c': s:VISUAL_MODIFIED_STATUS_LEFT }
 
@@ -92,8 +103,9 @@ let s:INACTIVE_TAB =          []
 let s:INACTIVE_STATUS_LEFT =  []
 let s:INACTIVE_STATUS_RIGHT = []
 
-let s:INACTIVE_TAB =          ['', '', s:cterm_light_gray, s:cterm_med_gray_hi, '']
-let s:INACTIVE_MODIFIED_TAB = ['', '', '', '']
+let s:INACTIVE_TAB =          ['', '', s:_term_medium_grey, s:_term_dark_grey, '']
+let s:INACTIVE_MODIFIED_TAB = ['', '', s:_term_orange, s:_term_dark_grey]
+
 let g:airline#themes#airtheme#palette.inactive = airline#themes#generate_color_map(s:INACTIVE_TAB, s:INACTIVE_TAB, s:INACTIVE_TAB)
 let g:airline#themes#airtheme#palette.inactive_modified = { 'airline_c': s:INACTIVE_MODIFIED_TAB }
 
