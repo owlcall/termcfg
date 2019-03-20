@@ -62,8 +62,7 @@ if (has('gui_running'))  "Graphical Vim
   let s:U = 'underline'
 
 else                     "Console Vim
-  if &t_Co == 256
-    "Set color palette with 256 colors
+  if &t_Co == 256 "Set color palette with 256 colors
 	let s:BROWN0  = '143'	" 
 	let s:BROWN1  = '101'	" Filler between borders
 	let s:GREEN0  = '108'	" Insert mode backgroun
@@ -71,7 +70,7 @@ else                     "Console Vim
   let s:BLUE    = '67'	" Syntax: identifiers
 	let s:YELLOW0 = '229'	" Syntax: {}
 	let s:TEAL0   = '66'	" 
-	let s:TEAL1   = '73'	" Gutter: current line
+	let s:TEAL1   = '66'	" Gutter: current line
 	let s:TEAL2   = '110'	" Syntax: functions
 	let s:ORANGE0 = '167'	" 
 	let s:ORANGE1 = '173'	" Syntax: macros
@@ -80,15 +79,15 @@ else                     "Console Vim
 	let s:PINK0   = '163'	" Done
 	let s:PINK1   = '131'	" Warnings, errors, FG/BG
 	let s:RED0    = '161'   " YCM Errors
-    let s:GREY0   = '233'	" Gutter BG
+  let s:GREY0   = '233'	" Gutter BG
 	let s:GREY1   = '234'	" Main BG
-
-	let s:GREY2   = '236'	" Current Line BG
-    let s:GREY3   = '235'	" 80-char column BG
-    let s:GREY4   = '240'	" Nontext, special keys
-    let s:GREY5   = '242'	" Gutter text
-    let s:GREY6   = '250'	" Code white, cmd view color
+	let s:GREY2   = '235'	" Current Line BG
+  let s:GREY3   = '235'	" Color Column BG
+  let s:GREY4   = '240'	" Nontext, special keys
+  let s:GREY5   = '238'	" Gutter text
+  let s:GREY6   = '250'	" Code white, cmd view color
 	let s:WHITE   = '231'	" Tab title
+  let s:WHITE1  = '247'	" Code white, cmd view color
   else
     "Set color palette with color names
     let s:RED    = 'red'
@@ -116,7 +115,7 @@ endif
 
 set background=dark
 
-exe 'hi Normal          '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:GREY6  .' '.s:M.'='.s:N
+exe 'hi Normal          '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:WHITE1 .' '.s:M.'='.s:N
 exe 'hi LineNr          '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
 exe 'hi FoldColumn      '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
 exe 'hi Folded          '.s:M.'bg='.s:GREY0  .' '.s:M.'fg='.s:GREY5  .' '.s:M.'='.s:N
@@ -162,7 +161,7 @@ exe 'hi CursorLine      '.s:M.'bg='.s:GREY2  .' '.s:M.'fg='.s:BG     .' '.s:M.'=
 exe 'hi helpLeadBlank   '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
 exe 'hi helpNormal      '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
 
-exe 'hi StatusLine      '.s:M.'bg='.s:BROWN1 .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
+exe 'hi StatusLine      '.s:M.'bg='.s:BROWN0 .' '.s:M.'fg='.s:GREY1  .' '.s:M.'='.s:N
 exe 'hi StatusLineNC    '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BROWN1 .' '.s:M.'='.s:N
 
 exe 'hi Visual          '.s:M.'bg='.s:GREY1  .' '.s:M.'fg='.s:TEAL2  .' '.s:M.'='.s:R
@@ -188,6 +187,8 @@ exe 'hi Directory       '.s:M.'bg='.s:BG     .' '.s:M.'fg='.s:TEAL1  .' '.s:M.'=
 exe 'hi ColorColumn     '.s:M.'bg='.s:GREY3  .' '.s:M.'fg='.s:BG     .' '.s:M.'='.s:N
 
 exe 'hi YcmErrorSection '.s:M.'bg='.s:RED0   .' '.s:M.'fg='.s:GREY3  .' '.s:M.'='.s:N
+
+"exe 'hi CursorKeyword   '.s:M.'bg='.s:GREY2     .' '.s:M.'fg='.s:BG .' '.s:M.'='.s:N
 
 "if has("gui_running")
 "hi SpellBad         ctermbg=NONE ctermfg=131  guibg=NONE    guifg=NONE    cterm=undercurl      gui=undercurl guisp=#af5f5f

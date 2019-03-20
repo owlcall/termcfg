@@ -15,6 +15,7 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_nr_format = ' %s '
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline#extensions#tabline#show_splits = 0
+"let g:airline#extensions#tabline#tabs_label = ''
 let g:airline_symbols_ascii = 1
 
 let g:airline_section_a = ''		" mode/crypt/paste/spell
@@ -30,4 +31,8 @@ let g:airline_powerline_fonts = 0	" disable powerline fonts
 " Ensure the vertical bars match the airline colors in the horizontal highlights
 hi VertSplit ctermbg=NONE ctermfg=240
 
+let s:M = 'cterm'
+let s:B = 'bold'
+let s:BG        = 'none'
+let s:ORANGE2 = '208'	" 
 

@@ -56,3 +56,7 @@ nnoremap <silent> <Leader>o :Le<CR>										" Open editor window
 "=== Editor bindings
 "nnoremap <space> za|					" Enable folding with the spacebar
 nnoremap <silent> <Leader>w :w !diff % -<CR>|	" Show differences before writing to file
+
+" Disable Ctrl-C interrupt, in order to train proper shortcut usage
+imap <C-C> <Nop>
+
