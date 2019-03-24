@@ -32,7 +32,7 @@ set -g status-left-bg default
 set -g status-left-fg colour244
 set -g status-left-length 40
 set -g status-left-attr default
-set -g status-left "#[fg=colour124]#{?client_prefix,#[reverse] #[noreverse],#[fg=default,bg=default] }#[fg=colour238,bg=default]@#h#[fg=default] [#S]"
+set -g status-left "#[fg=colour124]#{?client_prefix,#[reverse] #[noreverse],#[fg=default,bg=default] }#[fg=colour242,bg=default]@#h#[fg=default] [#S]"
 #set -g status-left "#[fg=colour124,bg=colour190]#{?client_prefix,#[reverse] #[noreverse],#[fg=default,bg=default] }#[fg=default,bg=default][#S]"
 
 # Right side of status bar
