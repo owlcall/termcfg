@@ -26,8 +26,14 @@ if has ('autocmd')
   autocmd Filetype python setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2
   autocmd Filetype markdown setlocal spell spelllang=en_us
 
-	autocmd WinEnter * set cursorline		" Highlight cursor line
-	autocmd WinLeave * set nocursorline		" Highlight cursor line
+	autocmd WinEnter * set cursorline
+	autocmd WinLeave * set nocursorline
+
+  autocmd InsertEnter * set nocursorline
+  autocmd InsertLeave * set cursorline
+
+  autocmd FocusGained * set cursorline
+  autocmd FocusLost * set nocursorline | redraw!
 
   "autocmd CursorMoved * exe printf('match CursorKeyword /\V\<%s\>/', escape(expand('<cword>'), '/\'))
 

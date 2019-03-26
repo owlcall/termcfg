@@ -51,6 +51,9 @@ set wildmenu	  	" Show advanced autocompletion in command mode
 set nojoinspaces	" don't autoinsert two spaces after '.', '?', '!' for join command
 "set colorcolumn=80
 
+" Keyboard response time
+set ttimeoutlen=10
+
 " Built in fatures
 "set omnifunc=syntaxcomplete#Complete
 

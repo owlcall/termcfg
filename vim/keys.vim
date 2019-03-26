@@ -49,13 +49,14 @@ nnoremap <silent> <S-Tab> :bp<CR>
 "nnoremap <silent> <leader>l :call ToggleList("Location List", 'l')<CR>
 "nnoremap <silent> <leader>f :call ToggleList("Quickfix List", 'c')<CR>	" Toggle quickfix view
 nnoremap <silent> <Leader><Leader> :nohlsearch<CR>						" Clear highlighting
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR>							" Clear highlighting
+"nnoremap <silent> <Esc><Esc> :nohlsearch<CR>							" Clear highlighting
 nnoremap <silent> <C-n>	   :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<CR>	" Toggle line numbers
 nnoremap <silent> <Leader>o :Le<CR>										" Open editor window
 
 "=== Editor bindings
 "nnoremap <space> za|					" Enable folding with the spacebar
 nnoremap <silent> <Leader>w :w !diff % -<CR>|	" Show differences before writing to file
+nnoremap <silent> <Leader>s :w<CR>
 
 " Disable Ctrl-C interrupt, in order to train proper shortcut usage
 imap <C-C> <Nop>
